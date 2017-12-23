@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ng1-wu-hmy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gnG-Fi-Ceu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,7 +49,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jqL-5G-Y8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.8" y="-284.70764617691157"/>
+            <point key="canvasLocation" x="1348" y="-284.70764617691157"/>
         </scene>
         <!--Add View-->
         <scene sceneID="3ne-De-uG9">
@@ -60,14 +60,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l5m-y3-01b">
-                                <rect key="frame" x="39" y="167" width="298" height="30"/>
+                                <rect key="frame" x="39" y="253" width="298" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqU-sg-S88">
-                                <rect key="frame" x="134" y="225" width="108" height="53"/>
+                                <rect key="frame" x="134" y="311" width="108" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
@@ -78,6 +78,14 @@
                                     <action selector="addItemClicked:" destination="wWN-Wa-z6z" eventType="touchUpInside" id="Wwy-cz-XnR"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cart" translatesAutoresizingMaskIntoConstraints="NO" id="6KB-qB-4hE">
+                                <rect key="frame" x="39" y="140" width="63" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="da5-zf-iRW">
+                                <rect key="frame" x="148" y="117" width="167" height="96"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Ibq-O7-shP"/>
@@ -85,12 +93,14 @@
                     <navigationItem key="navigationItem" title="Add View" id="a9U-MI-oeh"/>
                     <connections>
                         <outlet property="btn_addItem" destination="uqU-sg-S88" id="95j-wu-s7C"/>
+                        <outlet property="img_picker" destination="6KB-qB-4hE" id="bw9-wk-9jL"/>
+                        <outlet property="pickerView_item" destination="da5-zf-iRW" id="7zr-N2-ed0"/>
                         <outlet property="txt_addItem" destination="l5m-y3-01b" id="IUf-kP-WWc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RH-uM-GDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864.8" y="-284.70764617691157"/>
+            <point key="canvasLocation" x="2204" y="-284.70764617691157"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="uHX-fi-nH0">
@@ -121,23 +131,26 @@
             <point key="canvasLocation" x="1437.5999999999999" y="394.45277361319341"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="zQG-sn-bQV">
+        <scene sceneID="g0X-Tb-7s8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ng1-wu-hmy" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gnG-Fi-Ceu" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Lac-W9-CSg"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7FR-kK-sTd">
+                    <navigationItem key="navigationItem" id="UiB-VG-McZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xFB-O3-AuZ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="hDm-HO-9w9" kind="relationship" relationship="rootViewController" id="z79-lv-BTr"/>
+                        <segue destination="hDm-HO-9w9" kind="relationship" relationship="rootViewController" id="hTh-XX-qyz"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xJG-gB-Jjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3v7-X7-Mxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="-285"/>
+            <point key="canvasLocation" x="518" y="-278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cart" width="64" height="64"/>
+    </resources>
 </document>
